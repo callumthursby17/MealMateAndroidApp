@@ -1,0 +1,77 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    tools:context="com.upohtech.callumthursby.mealmate.countDown">
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Start Countdown"
+        android:id="@+id/countDownStartBut"
+        android:onClick="countDownStart"
+        android:layout_marginBottom="70dp"
+        android:background="#42b000"
+        android:layout_alignParentBottom="true"
+        android:layout_alignStart="@+id/countDownTimerTitl"
+        android:paddingRight="10dp"
+        android:paddingLeft="10dp" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="number"
+        android:ems="10"
+        android:id="@+id/mininput"
+        android:layout_centerHorizontal="true"
+        android:layout_above="@+id/countDownStartBut"
+        android:hint="Please Enter Minutes"
+        android:focusable="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Please enter the length of time needed..."
+        android:id="@+id/timeNeededinput"
+        android:textSize="20dp"
+        android:textColor="#000000"
+        android:singleLine="false"
+        android:textAlignment="center"
+        android:layout_above="@+id/mininput"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Countdown Timer "
+        android:id="@+id/countDownTimerTitl"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Please enter a name for the timer..."
+        android:id="@+id/timerNameTitle"
+        android:textColor="#000000"
+        android:textSize="20dp"
+        android:layout_below="@+id/countDownTimerTitl"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="43dp" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/timerNameInput"
+        android:hint="Please Enter Timer Name"
+        android:layout_below="@+id/timerNameTitle"
+        android:layout_alignStart="@+id/mininput"
+        android:textAlignment="center"
+        android:focusable="true" />
+
+</RelativeLayout>

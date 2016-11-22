@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.upohtech.callumthursby.mealmate" >
+
+    <uses-permission android:name="com.android.alarm.permission.SET_ALARM"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+
+    <uses-feature android:name="android.hardware.camera" android:required="true" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" >
+        <activity
+            android:name=".home"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".searchingIng"
+            android:label="@string/title_activity_searching_ing"
+            android:parentActivityName=".home" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.upohtech.callumthursby.mealmate.home" />
+        </activity>
+        <activity
+            android:name=".captureImage"
+            android:label="@string/title_activity_capture_image"
+            android:parentActivityName=".home" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.upohtech.callumthursby.mealmate.home" />
+        </activity>
+        <activity
+            android:name=".cookingTools"
+            android:label="@string/title_activity_cooking_tools"
+            android:parentActivityName=".home" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.upohtech.callumthursby.mealmate.home" />
+        </activity>
+        <activity
+            android:name=".countDown"
+            android:label="@string/title_activity_count_down"
+            android:parentActivityName=".home" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.upohtech.callumthursby.mealmate.home" />
+        </activity>
+
+        <!--<provider-->
+            <!--android:name="android.support.v4.content.Fileprovider"-->
+            <!--android:authorities="com.example.android.fileprovider"-->
+            <!--android:exported="false"-->
+            <!--android:grantUriPermissions="true">-->
+            <!--<meta-data-->
+                <!--android:name="android.support.FILE_PROVIDER_PATHS"-->
+                <!--android:resource="@xml/file_paths"></meta-data>-->
+        <!--</provider>-->
+
+    </application>
+
+</manifest>

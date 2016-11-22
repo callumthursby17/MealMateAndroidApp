@@ -1,0 +1,50 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    tools:context="com.upohtech.callumthursby.mealmate.captureImage">
+
+    <TextView android:text="Take a Picture of your creation, save it and share it with your friends. Just hit the button below to get started..." android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/captureTitle"
+        android:textColor="#121212" />
+
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/takeImageBut"
+        android:src="@drawable/cam"
+        android:scaleType="fitCenter"
+        android:layout_below="@+id/captureTitle"
+        android:layout_marginBottom="343dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentBottom="true"
+        android:layout_alignEnd="@+id/captureTitle"
+        android:layout_marginLeft="00dp"
+        android:onClick="cameraIntent"
+        android:background="#00ffffff" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/imageViewCapture"
+        android:layout_alignParentBottom="true"
+        android:layout_alignEnd="@+id/captureTitle"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="266dp"
+        android:layout_alignTop="@+id/takeImageBut"
+        android:adjustViewBounds="false" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Preview Image Below... "
+        android:id="@+id/previesImgText"
+        android:layout_marginBottom="177dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true" />
+
+</RelativeLayout>
